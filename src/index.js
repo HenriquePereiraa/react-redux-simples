@@ -4,10 +4,18 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//importanto dependencias do react-redux
+import { Provider } from 'react-redux';//componente que faz a integração entre os dois frameworks, react e redux
+import configStore from './store/storeConfig';
+
+const store = configStore();
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
   document.getElementById('root')
 );
 

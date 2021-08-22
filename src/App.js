@@ -1,23 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import Media from './components/Media';
+import Soma from './components/Soma';
+import Sorteio from './components/Sorteio';
+import Intervalo from './components/Intervalo';
+import { useState } from 'react';
 
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>Exercicio React-Redux(Simples)</h2>
+      <div className="linha">
+        <Intervalo></Intervalo>
+      </div>
+
+      <div className="linha">
+        <Media></Media>
+        <Soma></Soma>
+        <Sorteio></Sorteio>
+      </div>
     </div>
   );
 }
